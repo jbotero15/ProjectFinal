@@ -21,9 +21,6 @@ public class Square extends Shape {
 		/**
 		 * Arreglar  la palabra HIGTH
 		 */
-		/**
-		 * MIRAR QUE HACE ESTE CONSTRUCTOR PORQUE LA VERDAD NO SE JAJA
-		 */
 		setSize((width+higth)/2);
 	
 	}
