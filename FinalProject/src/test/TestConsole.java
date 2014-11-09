@@ -1,5 +1,9 @@
 package test;
 
+import javax.swing.JFrame;
+
+import presentation.JFrameGame;
+import logic.Game;
 import logic.Matrix;
 import logic.Square;
 
@@ -15,13 +19,8 @@ public class TestConsole {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
-		Matrix matrix = new Matrix();
-		System.out.println("Paola");
-		matrix.generateMatriz();
-		
-		Square square = new Square();
-		square.generateShape(matrix);
+		JFrameGame frameGame = new JFrameGame();
+		frameGame.setVisible(true);
 	}
 
 }

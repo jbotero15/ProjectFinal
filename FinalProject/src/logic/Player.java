@@ -1,4 +1,10 @@
 package logic;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import javax.swing.JOptionPane;
+
 /**
  * Clase donde se graficara las figuras geometricas y se realizaran los metodos corresóndiente que se 
  * extienden de la clase abstracta figura
@@ -6,7 +12,7 @@ package logic;
  *
  */
 
-public class Square extends Shape {
+public class Player extends Shape {
 	//------------------Attributes---------------
 	/**
 	 * Tamaño de la figura a dibujar
@@ -17,12 +23,11 @@ public class Square extends Shape {
 	/**
 	 * Donde se construye la figura sin parametros
 	 */
-	public Square() {
+	public Player() {
 		/**
 		 * Arreglar  la palabra HIGTH
 		 */
 		setSize((width+higth)/2);
-	
 	}
 	/**
 	 * Parametro donde cosntruye las opciones que el usuario pede ingresar
@@ -33,7 +38,7 @@ public class Square extends Shape {
 	 * @param character
 	 */
 	
-	 public Square(int x,int y, int width, int heigth,char character){
+	 public Player(int x,int y, int width, int heigth,char character){
 		 /**
 		  * Super invoca los metodos de la superclase  desde esta subclase
 		  */
@@ -47,7 +52,7 @@ public class Square extends Shape {
 	  * @param width
 	  * @param heigth
 	  */
-	 public Square(int x, int y, int width,int heigth){
+	 public Player(int x, int y, int width,int heigth){
 		 
 		 super(x,y,width,heigth,DEFAULT_CHARACTER);
 		 setSize((width+heigth)/2);

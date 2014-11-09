@@ -35,6 +35,8 @@ public abstract  class Shape {
 	 */
 	protected char character;
 	
+	protected int desplazamiento = 1; //
+	
 	//----------------Builders------------------
 	/**
 	 * Constructor que se define sin parametros en donde
@@ -90,6 +92,18 @@ public abstract  class Shape {
 	 */
 	public abstract void collisonShape();
 	
+	public void moveDown(){
+		y += desplazamiento;
+	}
+	public void moveUp(){
+		y -= desplazamiento;
+	}
+	public void moveLeft(){
+		x -= desplazamiento;
+	}
+	public void moveRight(){
+		x += desplazamiento;
+	}
 	//----------------Get&Set-------------------
 
 	public int getX() {

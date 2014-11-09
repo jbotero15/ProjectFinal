@@ -53,6 +53,22 @@ public class Matrix {
 				System.out.print(matrix [i][j] = DEFAULT_CHARACTER);
 			}
 		}
+		
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+	public void showMatriz(){
+		for(int i = 0 ;i<rows ;i++){
+			System.out.println();
+			for(int j= 0 ; j<columns; j++){
+				System.out.print(matrix [i][j]);
+			}
+		}
+		
+		System.out.println();
+		System.out.println();
+		System.out.println();
 	}
 	//----------------Gets&Sets---------------
 
