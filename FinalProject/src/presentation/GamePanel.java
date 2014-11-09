@@ -1,5 +1,6 @@
 package presentation;
 
+import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -31,6 +32,11 @@ public class GamePanel extends JPanel implements KeyListener {
 		
 		game = new Game();
 		this.addKeyListener(this);
+		/**
+		 * Color del panel juego======
+		 * Panel Color game
+		 */
+		setBackground(Color.decode("#A5DF00"));
 		
 	}
 	//-------------Methods------------------
