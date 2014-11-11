@@ -22,10 +22,10 @@ public class TestConsole {
 	 */
 	public static void main(String[] string) {
 		JFrameGame frameGame = new JFrameGame();
-	//	frameGame.setVisible(true);
+		frameGame.setVisible(true);
 		
 		WindowMenu windowMenu = new WindowMenu();
-		windowMenu.setVisible(true);
+		//windowMenu.setVisible(true);
 	}
 
 }
