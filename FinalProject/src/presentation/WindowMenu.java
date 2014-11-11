@@ -4,6 +4,7 @@ import java.awt.Color;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
 
@@ -12,7 +13,7 @@ import javax.swing.border.TitledBorder;
  * @author Jenny Paola Quesada Hernandez
  */
 
-public class WindowMenu extends JPanel{
+public class WindowMenu extends JDialog{
 	//--------------Constants---------------
 	/**
 	 * Constant name of the window
@@ -69,27 +70,24 @@ public class WindowMenu extends JPanel{
 	 * Menu Builder panel
 	 */
 	public WindowMenu() {
-	
 		/**
-		 * This is to add the title at the top of the panel
+		 * Size JDialog
 		 */
-		TitledBorder border = BorderFactory.createTitledBorder(DEFAULT_NAME);
+		setSize(DEFAULT_WIDTH, DEFAULT_HEIGTH);
 		/**
-		 * Letter Color Border Tittle
+		 * Tilte JDialog
 		 */
-		border.setTitleColor(Color.black);
-		/**
-		 * Assign the Border Title
-		 */
-		setBorder(border);
+		
+		setTitle(DEFAULT_NAME);
 		/**
 		 * panel color
 		 */
-		setBackground(Color.decode(DEFAULT_COLOR));
+		setBackground(Color.orange);
 		/**
 		 * position of the buttons
 		 */
 		setLayout(null);
+	
 		
 		/**
 		 * Add button to play
@@ -99,7 +97,7 @@ public class WindowMenu extends JPanel{
 		/**
 		 * Size button
 		 */
-		btnPlay.setBounds(200, 200, 150, 150);
+		btnPlay.setBounds(300, 20, 150, 80);
 		/**
 		 * Color Button
 		 */
@@ -113,7 +111,7 @@ public class WindowMenu extends JPanel{
 		/**
 		 * Size button
 		 */
-		btnLenguage.setBounds(200, 350, 150, 150);
+		btnLenguage.setBounds(300,150, 150, 80);
 		/**
 		 * Color Button
 		 */
@@ -127,7 +125,7 @@ public class WindowMenu extends JPanel{
 		/**
 		 * size Button
 		 */
-		btnScore.setBounds(200, 500, 150, 150);
+		btnScore.setBounds(300, 280, 150, 80);
 		/**
 		 * Color Button
 		 */
@@ -141,7 +139,8 @@ public class WindowMenu extends JPanel{
 		/**
 		 * size Button
 		 */
-		btnExit.setBounds(200, 650, 150, 150);
+		btnExit.setBounds(300, 410, 150, 80);
+		btnExit.setBackground(Color.decode("#000FF"));
 		this.add(btnExit);
 	
 		
@@ -153,7 +152,9 @@ public class WindowMenu extends JPanel{
 	 */
 	public static void main(String[] args) {
 		
-		MainWindow mainWindow = new MainWindow();
-		mainWindow.setVisible(true);
-	}
+		WindowMenu windowMenu = new WindowMenu();
+		windowMenu.setVisible(true);
+		
+		
+	} 
 }

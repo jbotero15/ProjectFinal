@@ -3,6 +3,8 @@ package test;
 import javax.swing.JFrame;
 
 import presentation.JFrameGame;
+import presentation.MainWindow;
+import presentation.WindowMenu;
 import logic.Game;
 import logic.Matrix;
 import logic.Square;
@@ -20,7 +22,10 @@ public class TestConsole {
 	 */
 	public static void main(String[] string) {
 		JFrameGame frameGame = new JFrameGame();
-		frameGame.setVisible(true);
+	//	frameGame.setVisible(true);
+		
+		WindowMenu windowMenu = new WindowMenu();
+		windowMenu.setVisible(true);
 	}
 
 }
