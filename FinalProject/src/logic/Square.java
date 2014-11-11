@@ -61,8 +61,8 @@ public class Square extends Shape {
 		
 	//Generamos los lados superior e inferior del cuadrado
 		for(int i = x ; i<x+width;i++){
-			matrix.getMatrix()[y][i]= DEFAULT_CHARACTER;
-			matrix.getMatrix()[y+higth-1][i]= DEFAULT_CHARACTER;
+			matrix.getMatrix()[y][i]= character;
+			matrix.getMatrix()[y+higth-1][i]= character;
 			
 		}
 		//Generamos los lados laterales

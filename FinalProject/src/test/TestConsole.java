@@ -10,15 +10,15 @@ import logic.Square;
 /**
  * Clase do pruebas donde se probara todo  
  * el programa por consola
- * @author Jenny Quesada
+ * @author Jenny Paola Quesada Hernandez
  *
  */
 public class TestConsole {
 	/**
 	 * Metodo principal de programa para que se ejecute el programa 
-	 * @param args
+	 * @param string
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] string) {
 		JFrameGame frameGame = new JFrameGame();
 		frameGame.setVisible(true);
 	}

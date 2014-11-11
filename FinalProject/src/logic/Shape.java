@@ -91,19 +91,31 @@ public abstract  class Shape {
 	 * Colision entre la figura y el jugador
 	 */
 	public abstract void collisonShape();
-	
+	/**
+	 * 
+	 */
 	public void moveDown(){
 		y += desplazamiento;
 	}
+	/**
+	 * 
+	 */
 	public void moveUp(){
 		y -= desplazamiento;
 	}
+	/**
+	 * 
+	 */
 	public void moveLeft(){
 		x -= desplazamiento;
 	}
+	/**
+	 * 
+	 */
 	public void moveRight(){
 		x += desplazamiento;
 	}
+	
 	//----------------Get&Set-------------------
 
 	public int getX() {

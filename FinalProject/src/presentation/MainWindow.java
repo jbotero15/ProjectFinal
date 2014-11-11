@@ -13,7 +13,6 @@ import javax.swing.JFrame;
 public class MainWindow extends JFrame {
 	//------------------Constants----------------
 	/**
-	 * Constantes para definir el aNCHO de la ventana principal////
 	 * Constant to define the top of the main window
 	 */
 	public static int DEFAULT_WIDTH = 800 ;
@@ -26,7 +25,7 @@ public class MainWindow extends JFrame {
 	 * Constante que defina el nombre de la ventana Juego//////
 	 * Constant that defines the name of the game window.
 	 */
-	public static String DEFAULT_NAME = "GEOMETRY GAME" ;
+	public static String DEFAULT_NAME = "JUEGO DE GEOMETRIA" ;
 	//------------------Attributes---------------
 	/**
 	 * Atributo que utiliza la clase Game Panel ////

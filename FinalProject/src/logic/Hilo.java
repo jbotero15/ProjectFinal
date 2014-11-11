@@ -9,7 +9,7 @@ public class Hilo extends Thread {
 	private Square square;
 
 	public Hilo() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public Hilo(Square square) {
