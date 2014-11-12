@@ -14,7 +14,6 @@ import logic.Player;
 import logic.Villain;
 
 /**
- * Panel de la ventana principal,donde ira la ejecucuion del juego.//
  * Panel of the main window, where anger running the game.
  * @author Jenny Paola Quesada Hernandez
  *
@@ -24,23 +23,25 @@ public class GamePanel extends JPanel  {
 	
 	//-------------Atributes----------------
 	/**
-	 * Atributo de tipo Juego donde se encuentra la conexión con la lógica.///
 	 * Attribute type game where the connection is with the logic.
 	 */
 	private Game game;
-	//-------------Builders-----------------
+	/**
+	 * Attribute of class 
+	 */
 	private Player player ;
 	/**
-	 * Constructor donde se va ha crear lo que va dentro de esta ventana//tttt
-	 * Constructor where he is going to create what is inside this window.
+	 * Attribute of Class Villain
 	 */
 	private Villain villain;
-	
-	public GamePanel(Game pGame) {
+	//-------------Builders-----------------
+	/**
+	 * Constructor where he is going to create what is inside this window.
+	 */
+	public GamePanel(Game logicGame) {
 		
-		game = pGame;
+		game = logicGame;
 		/**
-		 * Color del panel juego======
 		 * Panel Color game
 		 */
 		setBackground(Color.decode("#A5DF00"));
@@ -49,12 +50,17 @@ public class GamePanel extends JPanel  {
 	//-------------Methods------------------
 	
 	@Override
-	public void paint(Graphics g) {
+	public void paint(Graphics graphics) {
 		
-		super.paint(g);
-		this.game.getPlayer().generateShape(g);
-//		g.fillRect(20,20,100,100);
-//		g.setColor(Color.BLUE);
+		super.paint(graphics);
+	//	this.game.getPlayer().generateShape(graphics);
+	//	this.game.getVillain().generateShape(graphics);
+		this.game.getSquare().generateShape(graphics);
+		this.game.getCircle().generateShape(graphics);
+		this.game.getRectangle().generateShape(graphics);
+		
+		
+
 
 	}
 	

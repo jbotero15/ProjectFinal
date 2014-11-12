@@ -3,117 +3,90 @@ package logic;
 import java.awt.Graphics;
 
 /**
- * Se crea la clase abstracta de figura donde seran los obstaculos 
- * de la aplicacion, como cuadrado, triangulo, rectangulo,circulo
+ * Abstract kind of figure which will be the obstacles to the application, such as 
+ * square, triangle, rectangle, circle is created
  * @author Jenny Paola
  *
  */
 
 public abstract  class Shape {
-	//----------------Cosntants---------------
-	/**
-	 * Constante de tipo char que se crea para que dibuje la figura por consola
-	 */
-	public static char DEFAULT_CHARACTER = '*';
-	
 	//----------------Attribute---------------
 	/**
-	 * Coordenada x donde iniciara la figura
+	 * X coordinate where the figure began
 	 */
 	protected int x ;
 	/**
-	 * Coordenada Y donde iniciara la figura 
+	 * Y coordinate where the figure began
 	 */
 	protected int y;
 	/**
-	 * Ancho de las figuras geometricas
+	 *Width of geometric figures
 	 */
 	protected int width;
 	/**
-	 * Alto de las figuras geometricas
+	 * High of geometric figures
 	 */
 	protected int higth;
 	/**
-	 * Caracter utilizado para graficar las figuras geometricas por consola
+	 * players displacement
 	 */
-	protected char character;
 	
-	protected int desplazamiento = 1; //
+	protected int desplazamiento = 2;
 	
 	//----------------Builders------------------
 	/**
-	 * Constructor que se define sin parametros en donde
-	 *  los valores ya estaran establecidos
+	 * figure object type is created with not parameters
 	 */
 	public Shape() {
 		setX(x);
 		setY(y);
 		setWidth(width);
 		setHigth(higth);
-		setCharacter(DEFAULT_CHARACTER);
 	}
 	/**
-	 * Constructor que se genera conparametros donde
-	 *  el usuario pueda ingresar los datos que ellos deseen
+	 * an object of type parameters figure is created
 	 * @param x
 	 * @param y
 	 * @param width
 	 * @param heigth
 	 * @param caracter
 	 */
-	public Shape(int x, int y, int width, int heigth, char caracter){
-		setX(x);
-		setY(y);
-		setWidth(width);
-		setHigth(heigth);
-		setCharacter(caracter);
-	}
-	/**
-	 * Constructor que se genera conparametros donde
-	 * el usuario pueda ingresar los datos que ellos deseen, menos eñcaracter que estara definido
-	 * @param x
-	 * @param y
-	 * @param width
-	 * @param heigth
-	 */
 	public Shape(int x, int y, int width, int heigth){
 		setX(x);
 		setY(y);
 		setWidth(width);
 		setHigth(heigth);
-		setCharacter(DEFAULT_CHARACTER);
-		
 		
 	}
 	//----------------Methods-------------------
 	/**
-	 * Genera la forma de la figura
+	 * Generates the shape of the figure
 	 */
-	public abstract void generateShape(Graphics g);
+	public abstract void generateShape(Graphics graphics);
 	/**
-	 * Colision entre la figura y el jugador
+	 *Collision between the figure and the obstacles
 	 */
 	public abstract void collisonShape();
 	/**
-	 * 
+	 * figures moving down
 	 */
 	public void moveDown(){
 		y += desplazamiento;
 	}
 	/**
-	 * 
+	 * figures moving up
 	 */
 	public void moveUp(){
 		y -= desplazamiento;
 	}
 	/**
-	 * 
+	 * left movement figures
 	 */
 	public void moveLeft(){
 		x -= desplazamiento;
 	}
 	/**
-	 * 
+	 * right movement figures
 	 */
 	public void moveRight(){
 		x += desplazamiento;
@@ -153,12 +126,5 @@ public abstract  class Shape {
 		this.higth = higth;
 	}
 
-	public char getCharacter() {
-		return character;
-	}
-
-	public void setCharacter(char character) {
-		this.character = character;
-	}
 
 }

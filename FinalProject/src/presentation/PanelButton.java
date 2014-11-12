@@ -73,12 +73,10 @@ public class PanelButton extends JPanel {
 		 * Color panel to differentiate the main.
 		 */
 		setBackground(Color.decode("#01A9DB"));
-		this.addKeyListener(this);
 		/**
 		 * Create button Star.
 		 */
 		btnStar = new JButton("INICIAR");
-		btnStar.addKeyListener(this);
 		/**
 		 * assign the panel
 		 */

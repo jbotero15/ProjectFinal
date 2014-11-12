@@ -44,7 +44,7 @@ public class Player extends Shape {
 		 /**
 		  * Super invoca los metodos de la superclase  desde esta subclase
 		  */
-		 super(x,y,width,heigth,character);
+		 super(x,y,width,heigth);
 		 setSize((width+heigth)/2);
 	 }
 	 /**
@@ -56,7 +56,7 @@ public class Player extends Shape {
 	  */
 	 public Player(int x, int y, int width,int heigth){
 		 
-		 super(x,y,width,heigth,DEFAULT_CHARACTER);
+		 super(x,y,width,heigth);
 		 setSize((width+heigth)/2);
 	 }
 	//------------------Methods----------------

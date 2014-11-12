@@ -22,14 +22,12 @@ public class Square extends Shape {
 	 * Donde se construye la figura sin parametros
 	 */
 	public Square() {
-		/**
-		 * Arreglar  la palabra HIGTH
-		 */
+
 		setSize((width+higth)/2);
 	
 	}
 	/**
-	 * Parametro donde cosntruye las opciones que el usuario pede ingresar
+	 *Parameter which builds the options that the user can enter
 	 * @param x
 	 * @param y
 	 * @param width
@@ -37,13 +35,6 @@ public class Square extends Shape {
 	 * @param character
 	 */
 	
-	 public Square(int x,int y, int width, int heigth,char character){
-		 /**
-		  * Super invoca los metodos de la superclase  desde esta subclase
-		  */
-		 super(x,y,width,heigth,character);
-		 setSize((width+heigth)/2);
-	 }
 	 /**
 	  * Parametros que el usuario puede ingresar 
 	  * @param x
@@ -53,7 +44,7 @@ public class Square extends Shape {
 	  */
 	 public Square(int x, int y, int width,int heigth){
 		 
-		 super(x,y,width,heigth,DEFAULT_CHARACTER);
+		 super(x,y,width,heigth);
 		 setSize((width+heigth)/2);
 	 }
 	//------------------Methods----------------
@@ -61,10 +52,10 @@ public class Square extends Shape {
 	  * Algoritmo para genera el cuadrado en la matriz
 	  */
 	@Override
-	public void generateShape(Graphics g) {
+	public void generateShape(Graphics graphics) {
 		
-		g.setColor(Color.yellow);
-		g.fillRect(x, y, width, higth);
+		graphics.setColor(Color.yellow);
+		graphics.fillRect(x, y, width, higth);
 		
 	}
 	
