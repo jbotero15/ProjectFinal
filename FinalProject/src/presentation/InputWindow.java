@@ -22,6 +22,14 @@ import javax.swing.border.TitledBorder;
 public class InputWindow extends JDialog{
 	//-------------Constants--------------------
 	/**
+	 * action of button
+	 */
+	public static final String COMMAND_BUTTON_ENTER = "Ingresar";
+	/**
+	 * Commad button add
+	 */
+	public static final String COMMAND_BUTTON_ADD = "Agregar";
+	/**
 	 * Constant width panel
 	 */
 	private static int DEFAULT_WIDTH = 500;
@@ -46,10 +54,18 @@ public class InputWindow extends JDialog{
 	 */
 	private static String DEFAULT_NAME_BUTTON = "INGRESAR";
 	/**
+	 * Constant button add
+	 */
+	private static String DEFAUL_ADD_BUTTON = "AGREGAR" ;
+	/**
 	 * Constant button color
 	 */
 	private static String DEFAULT_COLOR_BUTTON = "#0080FF";
 	//-------------Attributes-------------------
+	/**
+	 * handler attribute buttons
+	 */
+	private EventHandler event;
 	/**
 	 * Label where anger name which the user must enter
 	 */
@@ -62,11 +78,18 @@ public class InputWindow extends JDialog{
 	 *Button to enter the menu of the application for sale
 	 */
 	private JButton btnEnter;
+	/**
+	 * button to enter the file name
+	 */
+	private JButton btnAdd;
 	//-------------Builders---------------------
 	/**
 	 *Constructor which will make the visual part of the panel
 	 */
 	public InputWindow() {
+		
+		EventHandler events = new EventHandler(this);
+		
 		/**
 		 * Panel name
 		 */
@@ -120,9 +143,21 @@ public class InputWindow extends JDialog{
 		/**
 		 * Size button
 		 */
-		btnEnter.setBounds(145,200,150,50);
+		btnEnter.setBounds(70,200,150,50);
+		btnEnter.setActionCommand(COMMAND_BUTTON_ENTER);
+		btnEnter.addActionListener(events);
 		this.add(btnEnter);
 		
+		btnAdd = new JButton(DEFAUL_ADD_BUTTON);
+		/**
+		 * Color Button
+		 */
+		btnAdd.setBackground(Color.decode("#2E64FE"));
+		/**
+		 * Size button
+		 */
+		btnAdd.setBounds(250, 200, 150, 50);
+		this.add(btnAdd);
 	}
 	//-------------Methods----------------------
 	//-------------Gets&Sets--------------------

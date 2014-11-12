@@ -16,6 +16,22 @@ import javax.swing.border.TitledBorder;
 public class WindowMenu extends JDialog{
 	//--------------Constants---------------
 	/**
+	 * command button to play
+	 */
+	public static final String COMMAND_BTN_PLAY = "Boton Jugar";
+	/**
+	 * command button to lenguage
+	 */
+	public static final String COMMAND_BTN_LENG ="Boton Lenguaje";
+	/**
+	 * command button to score
+	 */
+	public static final String COMMAND_BTN_SCR = "Boton Puntaje";
+	/**
+	 * command Button exit
+	 */
+	public static final String COMMAND_BTN_EXIT= "Boton Salir";
+	/**
 	 * Constant name of the window
 	 */
 	private static String DEFAULT_NAME = "JUEGO GEOMETRIA" ;
@@ -49,6 +65,10 @@ public class WindowMenu extends JDialog{
 	private static String DEFAULT_COLOR = "#2ECCFA";
 	
 	//--------------Attributes--------------
+	/**
+	 * handler attribute buttons
+	 */
+	private EventHandler event;
 	 /**
 	  * Play button
 	  */
@@ -69,7 +89,8 @@ public class WindowMenu extends JDialog{
 	/**
 	 * Menu Builder panel
 	 */
-	public WindowMenu() {
+	public WindowMenu(EventHandler events) {
+	
 		/**
 		 * Size JDialog
 		 */
@@ -102,6 +123,11 @@ public class WindowMenu extends JDialog{
 		 * Color Button
 		 */
 		btnPlay.setBackground(Color.decode("#FFFF00"));
+		/**
+		 * button has action
+		 */
+		btnPlay.setActionCommand(COMMAND_BTN_PLAY);
+		btnPlay.addActionListener(events);
 		this.add(btnPlay);
 		
 		/**
@@ -116,6 +142,11 @@ public class WindowMenu extends JDialog{
 		 * Color Button
 		 */
 		btnLenguage.setBackground(Color.decode("#80FF00"));
+		/**
+		 * button has action
+		 */
+		btnLenguage.setActionCommand(COMMAND_BTN_LENG);
+		btnLenguage.addActionListener(events);
 		this.add(btnLenguage);
 		
 		/**
@@ -130,6 +161,11 @@ public class WindowMenu extends JDialog{
 		 * Color Button
 		 */
 		btnScore.setBackground(Color.decode("#FE9A2E"));
+		/**
+		 * button has action
+		 */
+		btnScore.setActionCommand(COMMAND_BTN_SCR);
+		btnScore.addActionListener(events);
 		this.add(btnScore);
 		
 		/**
@@ -141,6 +177,10 @@ public class WindowMenu extends JDialog{
 		 */
 		btnExit.setBounds(300, 410, 150, 80);
 		btnExit.setBackground(Color.decode("#000FF"));
+		btnExit.addActionListener(events);
+		/**
+		 * button has action
+		 */
 		this.add(btnExit);
 	
 		
@@ -152,8 +192,8 @@ public class WindowMenu extends JDialog{
 	 */
 	public static void main(String[] args) {
 		
-		WindowMenu windowMenu = new WindowMenu();
-		windowMenu.setVisible(true);
+	//	WindowMenu windowMenu = new WindowMenu();
+		//windowMenu.setVisible(true);
 		
 		
 	} 

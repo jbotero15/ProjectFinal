@@ -30,6 +30,7 @@ public class Game {
 	 * 
 	 */
 	private Rectangle rectangle;
+	
 	//---------------Builders----------------
 	public Game() {
 		/**
@@ -56,6 +57,7 @@ public class Game {
 		/**
 		 * a new thread is created to execute
 		 */
+	
 		hilo = new Hilo();
 		hilo.iniciar();
 		
@@ -116,6 +118,7 @@ public class Game {
 	public void setRectangle(Rectangle rectangle) {
 		this.rectangle = rectangle;
 	}
+
 	
 	
 }

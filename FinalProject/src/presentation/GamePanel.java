@@ -2,6 +2,7 @@ package presentation;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Shape;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -19,7 +20,7 @@ import logic.Villain;
  *
  */
 
-public class GamePanel extends JPanel  {
+public class GamePanel extends JPanel{
 	
 	//-------------Atributes----------------
 	/**
@@ -55,9 +56,10 @@ public class GamePanel extends JPanel  {
 		super.paint(graphics);
 	//	this.game.getPlayer().generateShape(graphics);
 	//	this.game.getVillain().generateShape(graphics);
-		this.game.getSquare().generateShape(graphics);
-		this.game.getCircle().generateShape(graphics);
-		this.game.getRectangle().generateShape(graphics);
+	//this.game.getSquare().generateShape(graphics);
+		//this.game.getCircle().generateShape(graphics);
+		//this.game.getRectangle().generateShape(graphics);
+	
 		
 		
 

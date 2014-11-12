@@ -21,6 +21,18 @@ import javax.swing.border.TitledBorder;
 public class PanelButton extends JPanel {
 	//------------Constants-----------------
 	/**
+	 * constant button start
+	 */
+	private static String COMMAND_BTN_STAR = "Iniciar";
+	/**
+	 * command button stop
+	 */
+	private static String COMMAND_BTN_PAUSE ="Pausar" ;
+	/**
+	 * command button restart
+	 */
+	private static String COMMAND_BTN_REST = "Reanudar";
+	/**
 	 * Constant heigth panel
 	 */
 	public static int DEFAULT_HEIGTH = 100 ;
@@ -78,6 +90,10 @@ public class PanelButton extends JPanel {
 		 */
 		btnStar = new JButton("INICIAR");
 		/**
+		 * button has action
+		 */
+		btnStar.setActionCommand(COMMAND_BTN_STAR);
+		/**
 		 * assign the panel
 		 */
 		this.add(btnStar);
@@ -86,6 +102,11 @@ public class PanelButton extends JPanel {
 		 * Create the pause button
 		 */
 		btnPause = new JButton("PAUSAR");
+		
+		/**
+		 * button has action
+		 */
+		btnPause.setActionCommand(COMMAND_BTN_PAUSE);
 		/**
 		 * Assign the Pause Button
 		 */
@@ -95,6 +116,10 @@ public class PanelButton extends JPanel {
 		 * Creating the Reset button
 		 */
 		btnReset = new JButton("REINICIAR");
+		/**
+		 * button has action
+		 */
+		btnReset.setActionCommand(COMMAND_BTN_REST);
 		/**
 		 * Assign the button panel
 		 */

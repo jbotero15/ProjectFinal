@@ -4,10 +4,17 @@ import javax.swing.JFrame;
 import javax.swing.text.html.MinimalHTMLWriter;
 
 
+
+
+
+
+import presentation.InputWindow;
 import presentation.MainWindow;
 import presentation.WindowMenu;
+import logic.Circle;
 import logic.Game;
 import logic.Matrix;
+import logic.Rectangle;
 import logic.Square;
 
 /**
@@ -23,8 +30,8 @@ public class TestConsole {
 	 */
 	public static void main(String[] string) {
 		
-		MainWindow mainWindow = new MainWindow();
-		mainWindow.setVisible(true);
+		InputWindow input = new InputWindow();
+		input.setVisible(true);
 		
 		
 	}
