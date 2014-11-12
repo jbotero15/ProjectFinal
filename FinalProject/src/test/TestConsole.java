@@ -1,8 +1,9 @@
 package test;
 
 import javax.swing.JFrame;
+import javax.swing.text.html.MinimalHTMLWriter;
 
-import presentation.JFrameGame;
+
 import presentation.MainWindow;
 import presentation.WindowMenu;
 import logic.Game;
@@ -21,11 +22,11 @@ public class TestConsole {
 	 * @param string
 	 */
 	public static void main(String[] string) {
-		JFrameGame frameGame = new JFrameGame();
-		frameGame.setVisible(true);
 		
-		WindowMenu windowMenu = new WindowMenu();
-		//windowMenu.setVisible(true);
+		MainWindow mainWindow = new MainWindow();
+		mainWindow.setVisible(true);
+		
+		
 	}
 
 }

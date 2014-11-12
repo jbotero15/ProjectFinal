@@ -1,4 +1,7 @@
 package logic;
+
+import java.awt.Graphics;
+
 /**
  * Se crea la clase abstracta de figura donde seran los obstaculos 
  * de la aplicacion, como cuadrado, triangulo, rectangulo,circulo
@@ -86,7 +89,7 @@ public abstract  class Shape {
 	/**
 	 * Genera la forma de la figura
 	 */
-	public abstract void generateShape(Matrix matrix);
+	public abstract void generateShape(Graphics g);
 	/**
 	 * Colision entre la figura y el jugador
 	 */

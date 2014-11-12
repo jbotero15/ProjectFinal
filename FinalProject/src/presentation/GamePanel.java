@@ -7,8 +7,11 @@ import java.awt.event.KeyListener;
 
 import javax.swing.JPanel;
 
+import org.omg.CORBA.VisibilityHelper;
+
 import logic.Game;
 import logic.Player;
+import logic.Villain;
 
 /**
  * Panel de la ventana principal,donde ira la ejecucuion del juego.//
@@ -17,7 +20,7 @@ import logic.Player;
  *
  */
 
-public class GamePanel extends JPanel implements KeyListener {
+public class GamePanel extends JPanel  {
 	
 	//-------------Atributes----------------
 	/**
@@ -31,10 +34,11 @@ public class GamePanel extends JPanel implements KeyListener {
 	 * Constructor donde se va ha crear lo que va dentro de esta ventana//tttt
 	 * Constructor where he is going to create what is inside this window.
 	 */
-	public GamePanel() {
+	private Villain villain;
+	
+	public GamePanel(Game pGame) {
 		
-		game = new Game();
-		this.addKeyListener(this);
+		game = pGame;
 		/**
 		 * Color del panel juego======
 		 * Panel Color game
@@ -45,28 +49,15 @@ public class GamePanel extends JPanel implements KeyListener {
 	//-------------Methods------------------
 	
 	@Override
-	public void paint(Graphics graphics) {
+	public void paint(Graphics g) {
 		
-		super.paint(graphics);
-		graphics.fillRect(20,20,100,100);
-		graphics.setColor(Color.BLUE);
+		super.paint(g);
+		this.game.getPlayer().generateShape(g);
+//		g.fillRect(20,20,100,100);
+//		g.setColor(Color.BLUE);
 
 	}
-	@Override
-	public void keyPressed(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void keyReleased(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void keyTyped(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	//-------------Gets&Sets----------------
 
 	public Game getGame() {

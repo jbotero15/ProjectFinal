@@ -1,5 +1,7 @@
 package logic;
 
+import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -62,25 +64,20 @@ public class Player extends Shape {
 	  * Algoritmo para genera el cuadrado en la matriz
 	  */
 	@Override
-	public void generateShape(Matrix matrix) {
+	public void generateShape(Graphics g) {
 		
-	//Generamos los lados superior e inferior del cuadrado
-		for(int i = x ; i<x+width;i++){
-			matrix.getMatrix()[y][i]= DEFAULT_CHARACTER;
-			matrix.getMatrix()[y+higth-1][i]= DEFAULT_CHARACTER;
-			
-		}
-		//Generamos los lados laterales
-		for (int j = y; j < y+higth; j++) {
-			matrix.getMatrix()[j][x] = DEFAULT_CHARACTER;
-			matrix.getMatrix()[j][x+width-1] =DEFAULT_CHARACTER;
-		}
+		g.setColor(Color.yellow);
+		g.fillRect(x, y, width, higth);
 	
 		
 	}
+	/**
+	 * Metodo pra validar las colisones dentro de las figuras
+	 */
 	
 	@Override
 	public void collisonShape() {
+		
 		
 		
 	}

@@ -1,4 +1,8 @@
 package logic;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
 /**
  * Clase donde se graficara las figuras geometricas y se realizaran los metodos corresóndiente que se 
  * extienden de la clase abstracta figura
@@ -57,20 +61,10 @@ public class Square extends Shape {
 	  * Algoritmo para genera el cuadrado en la matriz
 	  */
 	@Override
-	public void generateShape(Matrix matrix) {
+	public void generateShape(Graphics g) {
 		
-	//Generamos los lados superior e inferior del cuadrado
-		for(int i = x ; i<x+width;i++){
-			matrix.getMatrix()[y][i]= character;
-			matrix.getMatrix()[y+higth-1][i]= character;
-			
-		}
-		//Generamos los lados laterales
-		for (int j = y; j < y+higth; j++) {
-			matrix.getMatrix()[j][x] = DEFAULT_CHARACTER;
-			matrix.getMatrix()[j][x+width-1] =DEFAULT_CHARACTER;
-		}
-	
+		g.setColor(Color.yellow);
+		g.fillRect(x, y, width, higth);
 		
 	}
 	

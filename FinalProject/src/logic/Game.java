@@ -21,7 +21,6 @@ public class Game {
 	 * 
 	 */
 	private Triangle triangle;
-	private	Matrix matrix;
 	/**
 	 * Atributo de la clase Jugador%&%&%&%&&
 	 * Player class attribute
@@ -29,17 +28,9 @@ public class Game {
 	private Player player;
 	//---------------Builders----------------
 	public Game() {
-		/**
-		 * Creamos la matriz
-		 */
-		matrix = new Matrix();
-		matrix.generateMatriz();
-
 		player = new Player(10,10,2,2,'#');
 		square = new Square(2,2,4,4);
-		square.generateShape(matrix);
 			
-		matrix.showMatriz();
 		
 		hilo = new Hilo(square);
 		hilo.iniciar();
@@ -49,10 +40,10 @@ public class Game {
 			@Override
 			public void run() {
 				while (true) {
-					matrix.generateMatriz();
-					square.generateShape(matrix);
-					player.generateShape(matrix);
-					matrix.showMatriz();
+//					matrix.generateMatriz();
+//				//	square.generateShape(matrix);
+//					//player.generateShape(matrix);
+//					matrix.showMatriz();
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -72,4 +63,13 @@ public class Game {
 	public void setPlayer(Player player) {
 		this.player = player;
 	}
+
+	public Square getSquare() {
+		return square;
+	}
+
+	public void setSquare(Square square) {
+		this.square = square;
+	}
+	
 }

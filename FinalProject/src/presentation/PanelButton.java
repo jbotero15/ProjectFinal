@@ -18,7 +18,7 @@ import javax.swing.border.TitledBorder;
  *
  */
 
-public class PanelButton extends JPanel implements KeyListener{
+public class PanelButton extends JPanel {
 	//------------Constants-----------------
 	/**
 	 * Constant heigth panel
@@ -73,11 +73,12 @@ public class PanelButton extends JPanel implements KeyListener{
 		 * Color panel to differentiate the main.
 		 */
 		setBackground(Color.decode("#01A9DB"));
-		
+		this.addKeyListener(this);
 		/**
 		 * Create button Star.
 		 */
 		btnStar = new JButton("INICIAR");
+		btnStar.addKeyListener(this);
 		/**
 		 * assign the panel
 		 */
@@ -104,21 +105,6 @@ public class PanelButton extends JPanel implements KeyListener{
 	
 	//------------Methods-------------------
 	
-	//
-	@Override
-	public void keyPressed(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void keyReleased(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void keyTyped(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	//------------Gets&Sets-----------------
 }
